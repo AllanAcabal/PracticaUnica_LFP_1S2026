@@ -1,0 +1,2 @@
+Proyecto de Análisis Académico:
+Este proyecto es una aplicación en C++ que permite cargar archivos con datos de estudiantes, cursos y notas, procesar la información y generar reportes estadísticos en formato HTML. Incluye cálculos como media, mediana, desviación estándar y percentiles, todo mediante un menú interactivo en consola. Desarrollado como práctica para el curso de Lenguajes Formales y de Programación, utilizando únicamente la biblioteca estándar de C++.
