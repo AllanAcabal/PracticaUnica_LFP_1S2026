@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits> 
 #include "Estructuras.h"
 #include "Funciones.h"
 #include "Reportes.h"
@@ -29,7 +30,17 @@ int main() {
         cout << "8. Generar Reporte: Analisis por Carrera\n";
         cout << "9. Salir\n";
         cout << "Seleccione una opcion: ";
-        cin >> opcion;
+
+        while (!(cin >> opcion)) {
+            cin.clear(); 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            cout << "Entrada invalida. Por favor ingrese un numero: ";
+        }
+
+        if (opcion < 1 || opcion > 9) {
+            cout << "Opcion fuera de rango. Intente de nuevo.\n";
+            continue; 
+        }
 
         switch (opcion) {
         case 1:
@@ -75,10 +86,8 @@ int main() {
                 reporteAnalisisPorCarrera(estudiantes, totalEstudiantes, cursos, totalCursos, notas, totalNotas);
             break;
         case 9:
-            cout << "Saliendo...\n";
+            cout << "Saliendo del sistema, ten feliz dia\n";
             break;
-        default:
-            cout << "Opción inválida.\n";
         }
     } while (opcion != 9);
 

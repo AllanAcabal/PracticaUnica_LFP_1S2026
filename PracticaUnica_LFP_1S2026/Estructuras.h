@@ -3,7 +3,6 @@
 
 #include <string>
 
-// Constantes para tamaños máximos
 const int MAX_ESTUDIANTES = 100;
 const int MAX_CURSOS = 50;
 const int MAX_NOTAS = 500;
@@ -28,8 +27,8 @@ struct Nota {
     int carnet;
     int codigo_curso;
     double nota;
-    std::string ciclo; // "1S" o "2S"
+    std::string ciclo; 
     int anio;
 };
 
-#endif // ESTRUCTURAS_H
+#endif 
